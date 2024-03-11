@@ -2,8 +2,10 @@ import { WebSocket } from "ws";
 import sound from "play-sound";
 import * as fs from "fs";
 
-const ws = new WebSocket("ws://localhost:8085");
-const player = sound();
+const ws = new WebSocket("ws://192.168.0.102:8085");
+const player = sound({
+    player: 'mpg123'
+});
 
 ws.on("open", () => {
   console.log("Connected to server");
