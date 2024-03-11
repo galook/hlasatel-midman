@@ -21,7 +21,7 @@ ws.on("message", (data) => {
   }
   if(parsedData.action === 'go'){
     console.log("got some");
-    const buf = Buffer.from(parsedData.data, 'base64');
+    const buf = Buffer.from(parsedData.data, 'base64url');
     fs.writeFileSync('play.mp3', buf);
     player.play('play.mp3', (err) => {
         if (err) {
