@@ -4,7 +4,9 @@ import * as fs from "fs";
 console.log("starting...");
 
 const ws = new WebSocket("ws://192.168.0.112:8085");
-const player = sound();
+const player = sound({
+  player: "aplay",
+});
 
 ws.on("open", () => {
   console.log("Connected to server");
