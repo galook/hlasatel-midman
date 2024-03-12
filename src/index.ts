@@ -3,7 +3,7 @@ import sound from "play-sound";
 import * as fs from "fs";
 console.log("starting...");
 
-const ws = new WebSocket("ws://192.168.0.102:8085");
+const ws = new WebSocket("ws://192.168.0.112:8085");
 const player = sound({
     player: 'mpg123'
 });
